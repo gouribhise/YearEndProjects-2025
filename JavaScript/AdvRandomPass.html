@@ -6,6 +6,28 @@
     <title>Advance Random Passwords Generator</title>
 </head>
 <body>
-    <h1>Advance Random Passwords Generator</h1>
+    <div class="main">
+        <h1>Advance Random Passwords Generator</h1>
+<div class="params">
+    <label for="lengthSlider">Choose Length: <span id="lengthValue">12</span></label>
+    <input type="range" id="lengthSlider" min="4" max="20" value="12">
+    <h5>Characters To Include</h5>
+    <label><input type="checkbox" id="chkLower" checked> Lowercase</label>
+    <label><input type="checkbox" id="chkUpper" checked> Uppercase</label>
+    <label><input type="checkbox" id="chkNumbers" checked> Numbers</label>
+    <label><input type="checkbox" id="chkSymbols"> Sumbols</label>
+
+</div>
+<div class="generate">
+    <button id="ps-btn">Generate Passwords</button>
+</div>
+<div class="showPass">
+    <input type="text" id="first" readonly/>
+    <button>Copy</button>
+    <input type="text" id="second" readonly/>
+    <button>Copy</button>
+</div>
+    </div>
+    <script src="./js/advPass.js"></script>
 </body>
 </html>
