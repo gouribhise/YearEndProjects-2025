@@ -25,4 +25,14 @@ btn.addEventListener('click',function(){
     second.value=getRandomChars()
 })
 
+
+function copyPassword(inputId){
+    const input=document.getElementById(inputId);
+    input.select();
+    input.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(input.value)
+        .then(()=>alert("Password Copied!!"))
+        .catch(err=>alert("Failed To Copy Password!!"))
+
+}
  
