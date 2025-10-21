@@ -1,0 +1,32 @@
+ .main{
+    background-color: #1C2430;
+    width:50vw;
+    height:50vh;
+    color:white;
+    padding:5%;
+    margin:0 auto;
+    margin-top:5%;
+ }
+
+ button{
+    background-color:#10B175;
+    padding:1%;
+    border-radius: 25px;
+
+ }
+
+ h1{
+    width:60%;
+
+ }
+
+ #title{
+    color:#10B175;
+ }
+ input{
+    background-color:#1C2430;
+    border:1px solid lightgray;
+    color:white;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
