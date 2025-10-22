@@ -83,6 +83,10 @@ body {
     flex-direction: column;
   }
   
+  #first,#second{
+    margin-left: 28%;
+    font-weight: bold;
+  }
   h4 {
     margin: 8px 0 0 0;
     font-size: 14px;
@@ -99,6 +103,8 @@ body {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-right: 10%;
+    margin-top:-6%;
   }
   
   .showPass button:hover {
@@ -107,6 +113,7 @@ body {
     transform: scale(1.05);
   }
   
+   
   /* Strength colors */
   .weak {
     color: #FF4C4C;

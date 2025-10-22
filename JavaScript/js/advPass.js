@@ -50,15 +50,15 @@ function checkStrength(password, targetElement) {
   targetElement.classList.remove('weak', 'medium', 'strong');
 
   if (password.length === 0) {
-    targetElement.textContent = 'Strength: None';
+    targetElement.textContent = 'None';
   } else if (score <= 1) {
-    targetElement.textContent = 'Strength: Weak';
+    targetElement.textContent = 'Weak';
     targetElement.classList.add('weak');
   } else if (score === 2 || score === 3) {
-    targetElement.textContent = 'Strength: Medium';
+    targetElement.textContent = 'Medium';
     targetElement.classList.add('medium');
   } else if (score === 4) {
-    targetElement.textContent = 'Strength: Strong';
+    targetElement.textContent = 'Strong';
     targetElement.classList.add('strong');
   }
 }
@@ -74,3 +74,15 @@ btn.addEventListener('click', function () {
   checkStrength(pass1, firstStr);
   checkStrength(pass2, secondStr);
 });
+
+
+//copy passwords
+function copyPassword(inputId){
+  const input=document.getElementById(inputId);
+  input.select();
+  input.setSelectionRange(0,99999);
+  navigator.clipboard.writeText(input.value)
+      .then(()=>alert("Password Copied!!"))
+      .catch(err=>alert("Failed To Copy Password!!"))
+
+}
