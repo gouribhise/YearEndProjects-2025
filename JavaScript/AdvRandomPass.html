@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/advpass.css"/>
     <title>Advance Random Passwords Generator</title>
 </head>
 <body>
     <div class="main">
-        <h1>Advance Random Passwords Generator</h1>
+        <h1>Advance <span id="title">Random Passwords</span> Generator</h1>
 <div class="params">
     <label for="lengthSlider">Choose Length: <span id="lengthValue">12</span></label>
     <input type="range" id="lengthSlider" min="4" max="20" value="12">
@@ -22,12 +23,33 @@
     <button id="ps-btn">Generate Passwords</button>
 </div>
 <div class="showPass">
-    <input type="text" id="first" readonly/>
-    <button>Copy</button>
-    <input type="text" id="second" readonly/>
-    <button>Copy</button>
+    <div>  
+        <div>
+            <input type="text" id="first" readonly/>
+
+            <h4 id="firstStr">Strength</h4>
+        </div>
+       
+           
+      
+      
+        <button>Copy</button></div>
+        <div>
+            <div>
+                <input type="text" id="second" readonly/>
+                <h4 id="secondStr">Strength</h4>
+           
+            </div>
+         
+             
+           
+            <button>Copy</button>
+        </div>
+    
+</div><!--end of show pass-->
+    
+
 </div>
-    </div>
     <script src="./js/advPass.js"></script>
 </body>
 </html>
