@@ -1,0 +1,27 @@
+body{
+    background-color:#283618;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1{
+    color:gold;
+}
+
+button{
+    background: gold;
+    color:#000;
+    border:none;
+    padding:10px 20px;
+    margin:10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background:#ffdb58;
+}
+
