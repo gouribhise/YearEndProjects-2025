@@ -25,3 +25,8 @@ button:hover{
     background:#ffdb58;
 }
 
+#newCardBtn:disabled {
+    background-color: #FEFAE0;
+    color: #000; /* optional */
+    cursor: not-allowed; /* shows disabled cursor */
+}

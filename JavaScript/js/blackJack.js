@@ -3,6 +3,7 @@ let newCard=document.getElementById('newCardBtn');
 let cards=document.getElementById('cards');
 let sum=document.getElementById('sum');
 let message=document.getElementById('message');
+ message.style.color="white"
 
 let total=0;
 let card=0;
@@ -10,33 +11,40 @@ let isAlive=true
 
 start.addEventListener('click',function(){
     console.log('new game started')
-    cards.textContent="Your Cards: "+0;
-    sum.textContent="Total: "+0;
+    cards.textContent="Your Cards: ";
+    sum.textContent="Total: ";
     total=0;
     card=0;
     isAlive=true
     newCard.disabled=false;
+    message.textContent="Click 'Start Game' To Begin"
+    message.style.color="white"
 })
 
-newCard.addEventListener('click',function(){
-    console.log('draw new card')
-    let ans=0;
-    ans=getRandomCard()
-    cards.textContent+=" "+ans;
-    total+=ans
-    sum.textContent="Sum: "+total;
-    if(total>21){
-        isAlive=false;
-        if(isAlive==false){
-            console.log(isAlive)
-            newCard.disabled=true;  
-        }
+newCard.addEventListener('click', function(){
+    let ans = getRandomCard();
+    cards.textContent += " " + ans;
+    total += ans;
+    sum.textContent = "Total: " + total;
+
+    if(total < 21){
+        message.textContent = "Do you want to draw a new card?";
+        message.style.fontSize="1rem"
         
 
-    }
-    console.log(ans,total)
+    } else if(total === 21){
+        message.textContent = "You've got a BlackJack!";
+        newCard.disabled = true;
+        message.style.fontSize="4rem"
+         
+    } else {
+        message.textContent = "You're out of the game!";
+        newCard.disabled = true;
+        message.style.fontSize="1.5rem"
+        message.style.color="red"
 
-})
+    }
+});
 
 
 function getRandomCard(){
