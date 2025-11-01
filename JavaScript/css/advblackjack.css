@@ -1,0 +1,11 @@
+#dealer_cards img{
+    height: 175px;
+    width:125px;
+    margin:2px;
+}
+
+#player_cards img{
+    height: 175px;
+    width:125px;
+    margin:2px;
+}
