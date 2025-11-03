@@ -7,6 +7,7 @@ let playerAceCount = 0;
 let hidden;
 let deck;
  
+var canHit=true
 window.onload=function(){
     buildDeck();
     shuffleDeck();
@@ -86,9 +87,54 @@ var stay_btn=document.getElementById('stay')
 
 
 hit_btn.addEventListener('click',function(){
-    console.log('hit pressed')
-})
+    console.log('got hit')
+    if(!canHit){
+        return
+    }
+    let cardImg=document.createElement("img")
+    let card=deck.pop();
+    cardImg.src="./cards/"+card+".png";
+    playerSum+=getValue(card)
+    playerAceCount+=checkAce(card);
+    document.getElementById("player_cards").append(cardImg)
 
+    if(reduceAce(playerSum,playerAceCount)>21){
+        canHit=false;
+    }
+ })
+
+ function reduceAce(playerSum,playerAceCount){
+    while(playerSum>21 && playerAceCount>0){
+        playerSum-=10;
+        playerAceCount-=1;
+    }
+    return playerSum
+ }
 stay_btn.addEventListener('click',function(){
     console.log('stay pressed')
+    dealerSum=reduceAce(dealerSum,dealerAceCount)
+    playerSum=reduceAce(playerSum,playerAceCount)
+    canHit=false;
+    document.getElementById("hidden").src = "./cards/" + hidden + ".png";
+        let message = "";
+    if (playerSum > 21) {
+        message = "You Lose!";
+    }
+    else if (dealerSum > 21) {
+        message = "You win!";
+    }
+    
+    else if (playerSum == dealerSum) {
+        message = "Tie!";
+    }
+    else if (playerSum > dealerSum) {
+        message = "You Win!";
+    }
+    else if (playerSum < dealerSum) {
+        message = "You Lose!";
+    }
+    document.getElementById('dealer_points').innerText=dealerSum;
+    document.getElementById('player_points').innerText=playerSum;
+    document.getElementById('message').textContent=message;
+    
 })
