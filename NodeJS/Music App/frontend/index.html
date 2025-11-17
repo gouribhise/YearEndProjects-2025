@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Instruments Explorer</title>
+</head>
+<body>
+    <h1>Music Instruments</h1>
+    <div id="categories"></div>
+    <div id="instrument-details"></div>
+    
+    <script>
+        const API = "http://localhost:3000";
+
+        async function loadCategories() {
+            const res = await fetch(`${API}/instruments`);
+            const data = await res.json();
+
+            const container = document.getElementById("categories");
+
+            Object.keys(data).forEach(category => {
+                const heading = document.createElement("h2");
+                heading.textContent = category.toUpperCase();
+                container.appendChild(heading);
+
+                data[category].forEach(inst => {
+                    const btn = document.createElement("button");
+                    btn.innerText = inst.name;
+                    btn.onclick = () => showInstrument(inst.name);
+                    container.appendChild(btn);
+                });
+            });
+        }
+
+        async function showInstrument(name) {
+            const res = await fetch(`${API}/instruments/${name}`);
+            const inst = await res.json();
+
+            const details = document.getElementById("instrument-details");
+            details.innerHTML = `
+                <h2>${inst.name}</h2>
+                <p><b>Origin:</b> ${inst.origin}</p>
+                <p><b>Importance:</b> ${inst.importance}</p>
+                <p><b>Masters:</b> ${inst.masters.join(", ")}</p>
+            `;
+        }
+
+        loadCategories();
+    </script>
+</body>
+</html>
