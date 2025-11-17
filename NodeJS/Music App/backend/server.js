@@ -1,35 +1,11 @@
 import express from "express"
 import cors from "cors"
-
+import {data} from "./data.js"
 const app=express();
 app.use(cors())
 
 const PORT=3000
-//simple data
-
-const data={
-    strings:[
-        {
-            name:"Sitar",
-            origin:"India",
-            importance:"Used in classical Indian music",
-            masters:["Ravi Shankar","Anushka Shankar"]
-        },
-        {
-           name:"Guitar",
-           origin:"Spain",
-           importance:"Popular in all music styles",
-           masters:["Jimi Hendrix","Eric Clapton"]
-        },
-        {
-            name:"Tabla",
-            origin:"India",
-            importance:"Key instrument in Hindustani classical music",
-            masters:["Zakir Hussain"]
-        }
-    ]
-}
-
+ 
 //Routes
 app.get("/",(req,res)=>{
     res.send("home test")
