@@ -1,52 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Instruments Explorer</title>
+<meta charset="UTF-8" />
+<title>Music Instruments</title>
+<link rel="stylesheet" href="./css/style.css"/>
 </head>
+
 <body>
-    <h1>Music Instruments</h1>
-    <div id="categories"></div>
-    <div id="instrument-details"></div>
-    
-    <script>
-        const API = "http://localhost:3000";
 
-        async function loadCategories() {
-            const res = await fetch(`${API}/instruments`);
-            const data = await res.json();
+<!-- TABS -->
+<div class="tabs">
+    <div class="tab active" data-category="strings">Strings</div>
+    <div class="tab" data-category="percussion">Percussion</div>
+    <div class="tab" data-category="wind">Wind</div>
+    <div class="tab" data-category="electronic">Electronic</div>
+</div>
 
-            const container = document.getElementById("categories");
+<!-- Cards go here -->
+<div id="grid" class="grid"></div>
 
-            Object.keys(data).forEach(category => {
-                const heading = document.createElement("h2");
-                heading.textContent = category.toUpperCase();
-                container.appendChild(heading);
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
 
-                data[category].forEach(inst => {
-                    const btn = document.createElement("button");
-                    btn.innerText = inst.name;
-                    btn.onclick = () => showInstrument(inst.name);
-                    container.appendChild(btn);
-                });
-            });
-        }
+<script src="./js/script.js"></script>
 
-        async function showInstrument(name) {
-            const res = await fetch(`${API}/instruments/${name}`);
-            const inst = await res.json();
-
-            const details = document.getElementById("instrument-details");
-            details.innerHTML = `
-                <h2>${inst.name}</h2>
-                <p><b>Origin:</b> ${inst.origin}</p>
-                <p><b>Importance:</b> ${inst.importance}</p>
-                <p><b>Masters:</b> ${inst.masters.join(", ")}</p>
-            `;
-        }
-
-        loadCategories();
-    </script>
 </body>
 </html>
