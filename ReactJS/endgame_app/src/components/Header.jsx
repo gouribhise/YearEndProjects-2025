@@ -1,8 +1,8 @@
 function Header(){
     return(
-        <div>
-            <h1>Header</h1>
-        </div>
+        <header>
+            <h1>Assembly Endgame</h1>
+        </header>
     )
 }
 export default Header
