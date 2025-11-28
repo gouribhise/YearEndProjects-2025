@@ -1,13 +1,23 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Word from "./Word";
 import Letters from "./Letters";
+import { data } from "../data"
+
 
 function Main(){
     const [count, setCount] = useState(0)
     const[guessed,setGueesed]=useState([])
+    const [word, setWord] = useState("")
     const[languages,setLanguages]=useState([
         "HTML","CSS","JS","React","TypeScript","NodeJS","Ruby","Assembly"
     ])
+
+     useEffect(() => {
+        const randomNum = Math.floor(Math.random() * data.length)
+        const selectedWord = data[randomNum].toUpperCase()
+    
+        setWord(selectedWord)
+       }, [])
 
    
 
@@ -28,8 +38,15 @@ function Main(){
         setGueesed([...guessed, letter]);
         console.log("What is gueesed",guessed)
         setCount(prev => prev + 1)
-        setLanguages(prev => prev.slice(1))
+       
         console.log("Coutns:",count)
+        if(word.includes(letter)){
+        
+         }else{
+            setLanguages(prev => prev.slice(1))
+        }
+
+
       };
     // ⭐ Show Game Over Screen
     if (count >= 8) {
@@ -59,7 +76,7 @@ function Main(){
         </section>
         <section id="puzzle">
             {/* word to decode */}
-            <Word guessed={guessed}/>
+            <Word guessed={guessed} word={word}/>
 
         </section>
         <section id="attempts">

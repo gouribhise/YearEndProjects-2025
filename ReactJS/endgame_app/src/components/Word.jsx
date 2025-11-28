@@ -1,17 +1,10 @@
 import { useEffect, useState } from "react"
-import { data } from "../data"
 
-function Word({ guessed }) {
-  const [word, setWord] = useState("")
-  const [hidden, setHidden] = useState([])
+function Word({ guessed,word }) {
 
-  useEffect(() => {
-    const randomNum = Math.floor(Math.random() * data.length)
-    const selectedWord = data[randomNum].toUpperCase()
+  const [hidden, setHidden] = useState([Array(word.length).fill("_")])
 
-    setWord(selectedWord)
-    setHidden(Array(selectedWord.length).fill("_"))
-  }, [])
+ 
 
   // 👇 This runs when guessed changes
   useEffect(() => {
