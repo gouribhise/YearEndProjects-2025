@@ -1,4 +1,44 @@
- 
+search=document.getElementById("search_box").value;
+console.log("what is search text:",search)
+search_btn=document.getElementById("search_btn")
+async function searchInst() {
+    const search = document.getElementById("search_box").value.toLowerCase();
+    const res = await fetch("http://localhost:3000/instruments");
+    const apiData = await res.json();
+
+    // Convert all categories into one array
+    const allInstruments = Object.values(apiData).flat();
+
+    // Filter search
+    const result = allInstruments.filter(item =>
+        item.name.toLowerCase().includes(search)
+    );
+
+    // Clear the grid before showing result
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    // If no match
+    if (result.length === 0) {
+        grid.innerHTML = "<p>No instrument found</p>";
+        return;
+    }
+
+    // Show only the matched card(s)
+    result.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = `
+            <h3>${item.name}</h3>
+            <p><small>${item.origin}</small></p>
+        `;
+        div.onclick = () => openModal(item);
+        grid.appendChild(div);
+    });
+}
+
+
+
     let apiData = {};
 
     // Fetch data from your Node API

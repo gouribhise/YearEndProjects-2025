@@ -11,7 +11,7 @@ export const data = {
         genres: ["Classical", "Fusion", "Folk"],
         priceRange: "₹10,000 – ₹80,000",
         famousWorks: ["Ravi Shankar – Raga Jog"],
-        image: "https://example.com/sitar.jpg",
+        image: "https://cdn.pixabay.com/photo/2020/03/21/07/51/tambura-4952939_1280.jpg",
         audioSample: "https://example.com/sitar-sound.mp3"
       },
       {
@@ -23,7 +23,7 @@ export const data = {
         genres: ["Rock", "Pop", "Blues", "Folk"],
         priceRange: "₹5,000 – ₹2,00,000",
         famousWorks: ["Jimi Hendrix – Little Wing"],
-        image: "https://example.com/guitar.jpg",
+        image: "https://cdn.pixabay.com/photo/2024/02/26/19/51/guitar-8598823_640.jpg",
         audioSample: "https://example.com/guitar.mp3"
       },
       {
@@ -35,7 +35,7 @@ export const data = {
         genres: ["Classical", "Folk", "Film music"],
         priceRange: "₹7,000 – ₹5,00,000",
         famousWorks: ["Paganini – Caprice No. 24"],
-        image: "https://example.com/violin.jpg",
+        image: "https://cdn.pixabay.com/photo/2013/07/13/10/06/violin-156558_640.png",
         audioSample: "https://example.com/violin.mp3"
       },
       {
@@ -59,7 +59,7 @@ export const data = {
         genres: ["Classical"],
         priceRange: "₹50,000 – ₹10,00,000",
         famousWorks: ["Debussy – Danse sacrée et danse profane"],
-        image: "https://example.com/harp.jpg",
+        image: "https://cdn.pixabay.com/photo/2013/10/14/19/15/harp-195636_640.jpg",
         audioSample: "https://example.com/harp.mp3"
       },
       {
@@ -71,7 +71,7 @@ export const data = {
         genres: ["Folk", "Pop"],
         priceRange: "₹2,000 – ₹20,000",
         famousWorks: ["Somewhere Over the Rainbow – Israel Kamakawiwo’ole"],
-        image: "https://example.com/ukulele.jpg",
+        image: "https://cdn.pixabay.com/photo/2016/05/06/19/25/ukulele-1376516_640.jpg",
         audioSample: "https://example.com/ukulele.mp3"
       },
       {
@@ -83,7 +83,7 @@ export const data = {
         genres: ["Classical", "Film music"],
         priceRange: "₹20,000 – ₹6,00,000",
         famousWorks: ["Bach Cello Suites"],
-        image: "https://example.com/cello.jpg",
+        image: "https://cdn.pixabay.com/photo/2024/03/11/18/29/cello-8627393_640.jpg",
         audioSample: "https://example.com/cello.mp3"
       },
       {
@@ -95,7 +95,7 @@ export const data = {
         genres: ["Classical", "Folk"],
         priceRange: "₹5,000 – ₹60,000",
         famousWorks: ["U. Srinivas – Mandolin Raga"],
-        image: "https://example.com/mandolin.jpg",
+        image: "https://cdn.pixabay.com/photo/2018/12/19/00/06/mandolin-3883302_640.jpg",
         audioSample: "https://example.com/mandolin.mp3"
       },
       {
@@ -107,7 +107,7 @@ export const data = {
         genres: ["Country", "American Folk"],
         priceRange: "₹7,000 – ₹70,000",
         famousWorks: ["Foggy Mountain Breakdown"],
-        image: "https://example.com/banjo.jpg",
+        image: "https://cdn.pixabay.com/photo/2018/05/03/20/10/banjo-3372248_640.png",
         audioSample: "https://example.com/banjo.mp3"
       },
       {
@@ -134,7 +134,7 @@ export const data = {
         genres: ["Classical", "Folk"],
         priceRange: "₹4,000 – ₹40,000",
         famousWorks: ["Zakir Hussain – Tabla Solo"],
-        image: "https://example.com/tabla.jpg",
+        image: "https://cdn.pixabay.com/photo/2015/05/03/18/03/drum-751456_640.jpg",
         audioSample: "https://example.com/tabla.mp3"
       },
       {
@@ -146,7 +146,7 @@ export const data = {
         genres: ["Rock", "Jazz"],
         priceRange: "₹10,000 – ₹3,00,000",
         famousWorks: ["Tom Sawyer – Rush"],
-        image: "https://example.com/drums.jpg",
+        image: "https://cdn.pixabay.com/photo/2020/07/03/05/52/music-5365267_640.png",
         audioSample: "https://example.com/drums.mp3"
       },
       {
@@ -158,7 +158,7 @@ export const data = {
         genres: ["Folk", "Bhangra"],
         priceRange: "₹2,000 – ₹20,000",
         famousWorks: ["Bhangra beats"],
-        image: "https://example.com/dhol.jpg",
+        image: "https://cdn.pixabay.com/photo/2022/01/05/05/53/music-6916427_1280.jpg",
         audioSample: "https://example.com/dhol.mp3"
       },
       {
@@ -194,7 +194,7 @@ export const data = {
         genres: ["Latin"],
         priceRange: "₹6,000 – ₹50,000",
         famousWorks: ["Salsa classics"],
-        image: "https://example.com/conga.jpg",
+        image: "https://cdn.pixabay.com/photo/2016/09/11/10/59/cajon-1661111_640.png",
         audioSample: "https://example.com/conga.mp3"
       },
       {
@@ -206,7 +206,7 @@ export const data = {
         genres: ["Latin", "Jazz"],
         priceRange: "₹2,000 – ₹15,000",
         famousWorks: ["Latin jazz"],
-        image: "https://example.com/bongo.jpg",
+        image: "https://cdn.pixabay.com/photo/2013/03/23/19/04/drum-96179_640.jpg",
         audioSample: "https://example.com/bongo.mp3"
       },
       {
@@ -218,7 +218,7 @@ export const data = {
         genres: ["African folk"],
         priceRange: "₹4,000 – ₹30,000",
         famousWorks: ["African drum performances"],
-        image: "https://example.com/djembe.jpg",
+        image: "https://cdn.pixabay.com/photo/2015/11/24/18/00/african-1060423_640.jpg",
         audioSample: "https://example.com/djembe.mp3"
       },
       {
@@ -242,7 +242,7 @@ export const data = {
         genres: ["Pop", "Folk"],
         priceRange: "₹300 – ₹2,000",
         famousWorks: ["Pop songs"],
-        image: "https://example.com/tambourine.jpg",
+        image: "https://cdn.pixabay.com/photo/2013/11/28/09/51/tambourine-219732_640.jpg",
         audioSample: "https://example.com/tambourine.mp3"
       }
     ],
@@ -257,7 +257,7 @@ export const data = {
         genres: ["Classical", "Folk", "Film"],
         priceRange: "₹500 – ₹10,000",
         famousWorks: ["Raga Brindavani Sarang – Chaurasia"],
-        image: "https://example.com/flute.jpg",
+        image: "https://cdn.pixabay.com/photo/2017/09/07/01/45/illustration-2723678_640.png",
         audioSample: "https://example.com/flute.mp3"
       },
       {
@@ -281,7 +281,7 @@ export const data = {
         genres: ["Jazz", "Blues"],
         priceRange: "₹15,000 – ₹2,00,000",
         famousWorks: ["Giant Steps – Coltrane"],
-        image: "https://example.com/saxophone.jpg",
+        image: "https://cdn.pixabay.com/photo/2016/09/15/21/09/saxophone-1672675_640.png",
         audioSample: "https://example.com/saxophone.mp3"
       },
       {
@@ -293,7 +293,7 @@ export const data = {
         genres: ["Jazz", "Classical"],
         priceRange: "₹7,000 – ₹60,000",
         famousWorks: ["Sing Sing Sing"],
-        image: "https://example.com/clarinet.jpg",
+        image: "https://cdn.pixabay.com/photo/2016/10/16/04/51/music-1744419_640.jpg",
         audioSample: "https://example.com/clarinet.mp3"
       },
       {
@@ -305,7 +305,7 @@ export const data = {
         genres: ["Jazz", "Blues"],
         priceRange: "₹5,000 – ₹70,000",
         famousWorks: ["What a Wonderful World"],
-        image: "https://example.com/trumpet.jpg",
+        image: "https://cdn.pixabay.com/photo/2020/03/31/13/33/music-4987649_640.jpg",
         audioSample: "https://example.com/trumpet.mp3"
       },
       {
@@ -317,7 +317,7 @@ export const data = {
         genres: ["Blues", "Folk"],
         priceRange: "₹200 – ₹3,000",
         famousWorks: ["Blues classics"],
-        image: "https://example.com/harmonica.jpg",
+        image: "https://cdn.pixabay.com/photo/2015/02/18/20/23/harmonica-641425_640.jpg",
         audioSample: "https://example.com/harmonica.mp3"
       },
       {
@@ -329,7 +329,7 @@ export const data = {
         genres: ["Folk"],
         priceRange: "₹5,000 – ₹80,000",
         famousWorks: ["Scottish folk tunes"],
-        image: "https://example.com/bagpipe.jpg",
+        image: "https://cdn.pixabay.com/photo/2018/05/03/20/10/bagpipes-3372246_640.png",
         audioSample: "https://example.com/bagpipe.mp3"
       },
       {
@@ -341,7 +341,7 @@ export const data = {
         genres: ["Classical"],
         priceRange: "₹20,000 – ₹1,50,000",
         famousWorks: ["Oboe concertos"],
-        image: "https://example.com/oboe.jpg",
+        image: "https://cdn.pixabay.com/photo/2012/04/15/18/24/oboe-34796_640.png",
         audioSample: "https://example.com/oboe.mp3"
       },
       {
@@ -353,7 +353,7 @@ export const data = {
         genres: ["Tribal"],
         priceRange: "₹3,000 – ₹20,000",
         famousWorks: ["Australian tribal music"],
-        image: "https://example.com/didgeridoo.jpg",
+        image: "https://cdn.pixabay.com/photo/2013/07/12/16/58/didgeridoo-151580_1280.png",
         audioSample: "https://example.com/didgeridoo.mp3"
       },
       {
@@ -365,7 +365,7 @@ export const data = {
         genres: ["Folk"],
         priceRange: "₹1,000 – ₹15,000",
         famousWorks: ["The Lonely Shepherd"],
-        image: "https://example.com/panflute.jpg",
+        image: "https://cdn.pixabay.com/photo/2015/02/28/12/19/pan-flute-653495_640.jpg",
         audioSample: "https://example.com/panflute.mp3"
       }
     ],
@@ -380,7 +380,7 @@ export const data = {
         genres: ["Electronic", "Pop", "Film"],
         priceRange: "₹5,000 – ₹2,00,000",
         famousWorks: ["Interstellar Theme"],
-        image: "https://example.com/synth.jpg",
+        image: "https://cdn.pixabay.com/photo/2016/08/18/00/48/vintage-synthesizer-1601941_640.jpg",
         audioSample: "https://example.com/synth.mp3"
       },
       {
@@ -392,7 +392,7 @@ export const data = {
         genres: ["Rock"],
         priceRange: "₹10,000 – ₹3,00,000",
         famousWorks: ["Sweet Child O’ Mine"],
-        image: "https://example.com/electricguitar.jpg",
+        image: "https://cdn.pixabay.com/photo/2018/11/27/17/32/electric-guitar-3841897_640.jpg",
         audioSample: "https://example.com/electricguitar.mp3"
       },
       {
@@ -404,7 +404,7 @@ export const data = {
         genres: ["EDM", "Hip-Hop"],
         priceRange: "₹5,000 – ₹50,000",
         famousWorks: ["Electronic tracks"],
-        image: "https://example.com/drummachine.jpg",
+        image: "https://cdn.pixabay.com/photo/2022/08/30/04/13/studio-7420221_640.jpg",
         audioSample: "https://example.com/drummachine.mp3"
       },
       {
@@ -416,7 +416,7 @@ export const data = {
         genres: ["Pop", "Rock"],
         priceRange: "₹3,000 – ₹1,00,000",
         famousWorks: ["Live band music"],
-        image: "https://example.com/keyboard.jpg",
+        image: "https://cdn.pixabay.com/photo/2021/11/16/13/43/instrument-6800993_640.jpg",
         audioSample: "https://example.com/keyboard.mp3"
       },
       {
@@ -428,7 +428,7 @@ export const data = {
         genres: ["EDM", "Hip-Hop"],
         priceRange: "₹5,000 – ₹80,000",
         famousWorks: ["Electronic remixes"],
-        image: "https://example.com/sampler.jpg",
+        image: "https://cdn.pixabay.com/photo/2021/11/26/10/14/groovebox-6825553_1280.png",
         audioSample: "https://example.com/sampler.mp3"
       },
       {
@@ -440,7 +440,7 @@ export const data = {
         genres: ["Fusion", "Pop"],
         priceRange: "₹7,000 – ₹70,000",
         famousWorks: [],
-        image: "https://example.com/electricviolin.jpg",
+        image: "https://cdn.pixabay.com/photo/2014/06/06/10/19/music-363276_640.jpg",
         audioSample: "https://example.com/electricviolin.mp3"
       },
       {
@@ -452,7 +452,7 @@ export const data = {
         genres: ["Hip-Hop", "EDM"],
         priceRange: "₹15,000 – ₹1,50,000",
         famousWorks: ["DJ mixes"],
-        image: "https://example.com/turntable.jpg",
+        image: "https://cdn.pixabay.com/photo/2023/02/16/03/43/music-player-7792956_640.jpg",
         audioSample: "https://example.com/turntable.mp3"
       },
       {
@@ -464,7 +464,7 @@ export const data = {
         genres: ["EDM", "Pop"],
         priceRange: "₹5,000 – ₹30,000",
         famousWorks: [],
-        image: "https://example.com/drumpad.jpg",
+        image: "https://cdn.pixabay.com/photo/2020/12/23/09/56/electronic-drum-pad-5854409_1280.jpg",
         audioSample: "https://example.com/drumpad.mp3"
       },
       {
@@ -488,7 +488,7 @@ export const data = {
         genres: ["Rock", "Funk"],
         priceRange: "₹10,000 – ₹1,50,000",
         famousWorks: [],
-        image: "https://example.com/bass.jpg",
+        image: "https://cdn.pixabay.com/photo/2015/05/27/20/55/electric-bass-787204_640.jpg",
         audioSample: "https://example.com/bass.mp3"
       }
     ]
