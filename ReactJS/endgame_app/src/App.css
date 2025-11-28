@@ -15,9 +15,35 @@ header h1{
     padding:20px;
 }
 
+#top {
+    text-align: center;
+ }
+
+ #puzzle{
+    margin-left:45vw;
+    font-size: 4rem;
+ }
+
+  #languages{
+    text-align: center;
+    margin-top: 10vh;
+  }
 .langs{
     margin-right: 20px;
     padding:20px;
     font-weight: bold;
     color:white;
+}
+
+#letters{
+   
+    width:40vw;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.ltrBtn{
+    padding:20px;
+    margin:10px;
 }
