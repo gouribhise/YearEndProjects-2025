@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-function AddProd() {
+function AddProd({ refreshList }) {
+
   const [product, setProduct] = useState({
     id: "",
     name: "",
@@ -10,86 +11,73 @@ function AddProd() {
   });
 
   const handleChange = (e) => {
-    console.log("inside handlechange");
     setProduct({
       ...product,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
-    console.log("inside handlesubmit");
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Product added:", product);
 
-    alert("Product Added!");
+    const newProduct = {
+      id: Number(product.id),
+      name: product.name,
+      description: product.description,
+      price: Number(product.price),
+      quantity: Number(product.quantity)
+    };
 
-    setProduct({
-      id: "",
-      name: "",
-      description: "",
-      price: "",
-      quantity: ""
-    });
+    try {
+      const response = await fetch("http://127.0.0.1:8000/product/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newProduct)
+      });
+
+      const data = await response.json();
+      console.log("Product added:", data);
+
+      alert("Product Added!");
+
+       refreshList();
+
+      // Reset form
+      setProduct({
+        id: "",
+        name: "",
+        description: "",
+        price: "",
+        quantity: ""
+      });
+
+    } catch (err) {
+      console.log("Error:", err);
+    }
   };
 
   return (
     <>
       <div className="container">
-        <div className="row">
-          <h3>Add Product</h3>
-        </div>
+        <div className="row"><h3>Add Product</h3></div>
 
         <form onSubmit={handleSubmit}>
-          <input
-            type="number"
-            name="id"
-            value={product.id}
-            onChange={handleChange}
-            className="col-md-3"
-            placeholder="Product ID"
-          />
+          <input type="number" name="id" value={product.id}
+                 onChange={handleChange} placeholder="Product ID" />
 
-          <input
-            type="text"
-            name="name"
-            value={product.name}
-            onChange={handleChange}
-            required
-            className="col-md-3"
-            placeholder="Product Name"
-          />
+          <input type="text" name="name" value={product.name}
+                 onChange={handleChange} placeholder="Product Name" required />
 
-          <input
-            type="text"
-            name="description"
-            value={product.description}
-            onChange={handleChange}
-            className="col-md-3"
-            placeholder="Description"
-          />
+          <input type="text" name="description" value={product.description}
+                 onChange={handleChange} placeholder="Description" />
 
-          <input
-            type="number"
-            name="price"
-            value={product.price}
-            onChange={handleChange}
-            className="col-md-3"
-            placeholder="Price"
-          />
+          <input type="number" name="price" value={product.price}
+                 onChange={handleChange} placeholder="Price" />
 
-          <input
-            type="number"
-            name="quantity"
-            value={product.quantity}
-            onChange={handleChange}
-            className="col-md-3"
-            placeholder="Quantity"
-          />
- 
-          <button type="submit" className="btn btn-primary mt-3">
-            Add
-          </button>
+          <input type="number" name="quantity" value={product.quantity}
+                 onChange={handleChange} placeholder="Quantity" />
+
+          <button type="submit" className="btn btn-primary mt-3">Add</button>
         </form>
       </div>
     </>

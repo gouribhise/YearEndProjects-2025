@@ -6,6 +6,6 @@ class Product(BaseModel):
     name:str
     description:str
     price:float
-    quatity:int
+    quantity:int
 
     

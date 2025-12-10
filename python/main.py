@@ -1,15 +1,23 @@
+
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from models import Product
 app=FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],        # allow all origins (React)
+    allow_credentials=True,
+    allow_methods=["*"],        # GET, POST, PUT, DELETE
+    allow_headers=["*"],        # any headers
+)
 @app.get("/")
 def greet():
     return "Welcome to my page"
 
 products=[
-    Product(id=1,name="phone",description="budget phone",price=99,quatity=2),
-    Product(id=2,name="laptop",description="gaming phone",price=999,quatity=4),
-    Product(id=3,name="mouse",description="gaming mouse",price=99,quatity=3)
+    Product(id=1,name="phone",description="budget phone",price=99,quantity=2),
+    Product(id=2,name="laptop",description="gaming phone",price=999,quantity=4),
+    Product(id=3,name="mouse",description="gaming mouse",price=99,quantity=3)
 
 
 ]
