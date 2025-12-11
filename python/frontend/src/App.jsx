@@ -5,8 +5,8 @@ import Products from "./components/Products";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
-  // Fetch products from backend
   const loadProducts = async () => {
     const res = await fetch("http://127.0.0.1:8000/products/");
     const data = await res.json();
@@ -14,8 +14,23 @@ function App() {
   };
 
   useEffect(() => {
-    loadProducts();   // load products when app starts
+    loadProducts();
   }, []);
+
+  useEffect(() => {
+    setFilteredProducts(products); // initially show all
+  }, [products]);
+
+  const handleSearch = (query) => {
+    if (!query) {
+      setFilteredProducts(products);
+    } else {
+      const filtered = products.filter((prod) =>
+        prod.name.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+    }
+  };
 
   return (
     <div>
@@ -24,19 +39,17 @@ function App() {
       <div className="container">
 
         <div className="row">
-          {/* Pass loadProducts to AddProd */}
           <div className="col-md-6">
             <AddProd refreshList={loadProducts} />
           </div>
 
           <div className="col-md-4">
-            <SearchProd products={products} />
+            <SearchProd onSearch={handleSearch} />
           </div>
         </div>
 
         <div className="row">
-          {/* Pass products to Products */}
-          <Products products={products} refreshList={loadProducts} />
+          <Products products={filteredProducts} refreshList={loadProducts} />
         </div>
 
       </div>
